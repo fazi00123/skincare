@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-white">
+  
+  <section class=" bg-[#FBFBFB] xl:px-24 lg:px-10 px-5 xl:pt-14 lg:pt-8 pt-5">
+    <nav class="bg-white py-5 lg:px-10 px-5 relative">
+        <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/logo.png" alt="Logo" class="">
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex items-center space-x-16">
+      <ul class="flex lg:space-x-8 xl:space-x-16">
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition active"><a href="#">Home</a></li>
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Our services</a></li>
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Our story</a></li>
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Button -->
+    <div class="hidden lg:block">
+      <button class="bg-[#5B3A4B] text-white text-lg py-2 px-6 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+        Contact us
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="relative w-8 h-8 focus:outline-none">
+        <div id="bar1" class="absolute w-8 h-0.5 bg-[#5B3A4B] transition-transform duration-300"></div>
+        <div id="bar2" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-3 transition-opacity duration-300"></div>
+        <div id="bar3" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-6 transition-transform duration-300"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden mt-4 space-y-4 hidden animate-fade-in">
+    <ul class="flex flex-col space-y-3 text-center">
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition active">Home</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our services</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our story</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B]  transition">Contact us</a></li>
+    </ul>
+    <div class="text-center">
+      <button class="mt-4 bg-[#5B3A4B] text-white text-lg py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+        Contact us
+      </button>
+    </div>
+  </div>
+    </nav>
+  </section>
+
+
+
+   <!-- Hero Section -->
+  <section class="bg-[#FBFBFB] xl:px-24 lg:px-10 px-5 flex flex-col lg:flex-row justify-between md:gap-10">
+    <!-- Text Content -->
+    <div class="lg:w-2/5 w-full space-y-6 xl:pt-32 2xl:pt-40 pt-20">
+      <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">
+        Healthy Skin Starts Here
+      </h1>
+      <p class="2xl:text-lg xl:text-base text-sm text-[#666666]">
+        Personalized skincare treatments by Dr. [Name], a board-certified dermatologist dedicated to helping you
+        achieve radiant, healthy skin.
+      </p>
+      <div class="flex flex-row  gap-5 items-center justify-start ">
+        <button class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition text-center md:text-start">
+          Book an Appointment
+        </button>
+        <button class="bg-white text-[#5B3A4B] xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-[#5B3A4B] hover:text-white border border-[#5B3A4B] transition text-center lg:text-start">
+          Explore Treatments
+        </button>
+      </div>
+    </div>
+
+    <!-- Image Content -->
+    <div class="relative lg:w-3/5 w-full mt-12 md:mt-0">
+      <img src="./assets/img/heroimg1.png" alt="Skincare" class="">
+
+      <!-- Card on image -->
+      <div class="absolute 2xl:top-36 2xl:right-36 xl:right-20 md:top-20 top-32 right-0 bg-white/50 backdrop-blur-sm rounded-lg shadow-md py-4 px-7 w-[250px]">
+        <h1 class="text-[#5B3A4B] text-base  mb-2">Natural skin treatment</h1>
+        <div class="flex space-x-2 overflow-x-auto mb-3">
+          <img src="./assets/img/cardimg1.png" class="h-12 w-12 rounded object-cover">
+          <img src="./assets/img/cardimag2.png" class="h-12 w-12 rounded object-cover">
+          <img src="./assets/img/cardimag3.png" class="h-12 w-12 rounded object-cover">
+        </div>
+        <button class="bg-[#5B3A4B] text-white text-sm py-2 px-6 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B]transition">
+          View Recommendation
+        </button>
+      </div>
+    </div>
+
+  </section>
+   <!-- Injection Tag -->
+      <div class="md:flex items-center absolute z-50 xl:pl-40 2xl:pl-80 lg:pl-16 -mt-20 md:block hidden">
+        <div class="bg-[#f9f8f8] text-[#5B3A4B] px-6 py-4 rounded shadow-lg w-fit text-lg font-medium">
+          <h1>
+          Skin Booster Injection
+          </h1>
+        </div>
+        <div>
+       <img src="./assets/img/line.png" alt="">
+        </div>
+      </div>
+
+<!-- about section  -->
+
+<section class="xl:px-24 lg:px-10 px-5 xl:py-40 py-20">
+  <div class="flex lg:flex-row flex-col-reverse justify-between items-center lg:gap-20 gap-10">
+    <div class="lg:w-1/2 w-full">
+      <img src="./assets/img/aboutimg.png" class="w-full" alt="">
+    </div>
+    <div class="lg:w-1/2 w-full">
+      <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">About the Doctor</h1>
+      <p class="2xl:text-[22px] 2xl:leading-10 xl:text-base text-sm text-[#666666] pt-5">
+        Dr. <span class="font-bold text-[#5B3A4B]">Tuba</span> is a board-certified dermatologist with over <span class="font-bold text-[#5B3A4B]">4</span> years of experience in treating various skin conditions, from acne and eczema to cosmetic concerns like wrinkles and pigmentation. With a patient-first philosophy, Dr. [Name] offers personalized care and advanced treatments tailored to your unique skin need
+      </p>
+
+       <div class="xl:pt-14 pt-10">
+        <button class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition text-center md:text-start">
+          Book an Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- services section  -->
+
+
+<section>
+
+  <!-- care services  -->
+  <div class="text-center 2xl:pb-16 lg:pb-10">
+    <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">Comprehensive Skin Care Services</h1>
+    <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] pt-4">Personalized Care to Help You Look and Feel Your Best</p>
+  </div>
+
+  <div class="bg-cover bg-no-repeat xl:px-24 lg:px-10 px-5" style="background-image: url(./assets/img/line7.png);">
+    <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-2 lg:gap-10 gap-5 py-10">
+      <img src="./assets/img/services1.png" class="w-full lg:pt-32 md:pt-20" alt="">
+      <img src="./assets/img/services2.png" class="w-full " alt="">
+      <img src="./assets/img/services3.png" class="w-full lg:pt-20 md:pt-20" alt="">
+      <img src="./assets/img/services4.png" class="w-full" alt="">
+    </div>
+  </div>
+
+
+  <!-- services type section  -->
+
+  <div class="xl:px-24 lg:px-10 md:px-5 lg:py-24 py-10 space-y-10">
+    <div class="flex md:flex-row flex-col justify-between items-center  border-[1px] border-[#FBFBFB] hover:bg-[#FBFBFB] hover:shadow-xl 2xl:p-10 p-5">
+        <h1 class="2xl:text-2xl text-lg text-[#5B3A4B] leading-tight md:w-1/5 w-full">Medical Dermatology</h1>
+        <p class="2xl:text-xl md:text-sm text-xs text-[#666666] pt-4 md:w-3/5 w-full">We diagnose and treat a wide range of skin conditions including acne, eczema, rosacea, and psoriasis with personalized care.</p>
+        <img src="./assets/img/errow.png"  alt="">
+    </div>
+
+     <div class="flex md:flex-row flex-col justify-between items-center border-[1px] border-[#FBFBFB] hover:bg-[#FBFBFB] hover:shadow-xl 2xl:p-10 p-5">
+        <h1 class="2xl:text-2xl text-lg text-[#5B3A4B] leading-tight md:w-1/5 w-full">Cosmetic Dermatology</h1>
+        <p class="2xl:text-xl md:text-sm text-xs text-[#666666] pt-4 md:w-3/5 w-full">Enhance your natural beauty with non-invasive treatments like Botox, fillers, chemical peels, and laser therapy.</p>
+        <img src="./assets/img/errow.png"  alt="">
+    </div>
+
+     <div class="flex md:flex-row flex-col justify-between items-center border-[1px] border-[#FBFBFB] hover:bg-[#FBFBFB] hover:shadow-xl 2xl:p-10 p-5">
+        <h1 class="2xl:text-2xl text-lg text-[#5B3A4B] leading-tight md:w-1/5 w-full">Skin Rejuvenation</h1>
+        <p class="2xl:text-xl md:text-sm text-xs text-[#666666] pt-4 md:w-3/5 w-full">Restore your skin’s glow with advanced rejuvenation treatments designed to improve texture, tone, and elasticity.</p>
+        <img src="./assets/img/errow.png"  alt="">
+    </div>
+
+     <div class="flex md:flex-row flex-col justify-between items-center border-[1px] border-[#FBFBFB] hover:bg-[#FBFBFB] hover:shadow-xl 2xl:p-10 p-5">
+        <h1 class="2xl:text-2xl text-lg text-[#5B3A4B] leading-tight md:w-1/5 w-full">Anti-Aging Solutions</h1>
+        <p class="2xl:text-xl md:text-sm text-xs text-[#666666] pt-4 md:w-3/5 w-full">We offer customized anti-aging plans including microneedling, skin tightening, and hydration therapies.</p>
+        <img src="./assets/img/errow.png"  alt="">
+    </div>
+
+  </div>
+</section>
+
+<!-- patient section  -->
+
+<section class="bg-[#FBFBFB] xl:px-24 lg:px-10 px-5 xl:py-20 py-10">
+ 
+  <div class="text-center xl:pb-16 pb-10">
+    <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">Real Results from Real Patients</h1>
+    <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] pt-4">Explore transformations from clients who have experienced Dr. <span class="font-bold text-[#5B3A4B]">Tuba’s</span> expert care.</p>
+  </div>
+
+
+<!-- Image Container -->
+<div id="imageContainer">
+  <!-- First row: always visible -->
+  <div class="flex md:flex-row flex-col md:gap-20 gap-5">
+    <div>
+      <img src="./assets/img/payientimag.png" alt="">
+      <div class="bg-[#5B3A4B] text-center py-2">
+        <h1 class="text-white text-sm">Before & After</h1>
+      </div>
+    </div>
+    <div>
+      <img src="./assets/img/patientmen.png" alt="">
+      <div class="bg-[#5B3A4B] text-center py-2">
+        <h1 class="text-white text-sm">Before & After</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buttons -->
+<div class="xl:pt-14 pt-10 text-center">
+  <button
+    id="seeMoreBtn"
+    onclick="addMoreImages()"
+    class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition"
+  >
+    See More
+  </button>
+
+  <button
+    id="seeLessBtn"
+    onclick="removeExtraImages()"
+    class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition hidden"
+  >
+    See Less
+  </button>
+</div>
+
+<!-- Script -->
+<script>
+  let imageCount = 0;
+  const maxRows = 3;
+  const container = document.getElementById('imageContainer');
+  const seeMoreBtn = document.getElementById('seeMoreBtn');
+  const seeLessBtn = document.getElementById('seeLessBtn');
+
+  function addMoreImages() {
+    if (imageCount >= maxRows) return;
+
+    const newRow = document.createElement('div');
+    newRow.className = 'flex md:flex-row flex-col md:gap-20 gap-5 mt-5 extra-row';
+    newRow.innerHTML = `
+      <div>
+        <img src="./assets/img/payientimag.png" alt="">
+        <div class="bg-[#5B3A4B] text-center py-2">
+          <h1 class="text-white text-sm">Before & After</h1>
+        </div>
+      </div>
+      <div>
+        <img src="./assets/img/patientmen.png" alt="">
+        <div class="bg-[#5B3A4B] text-center py-2">
+          <h1 class="text-white text-sm">Before & After</h1>
+        </div>
+      </div>
+    `;
+    container.appendChild(newRow);
+    imageCount++;
+
+    // Show "See Less"
+    seeLessBtn.classList.remove('hidden');
+
+    // Hide "See More" after limit
+    if (imageCount === maxRows) {
+      seeMoreBtn.classList.add('hidden');
+    }
+  }
+
+  function removeExtraImages() {
+    const extraRows = document.querySelectorAll('.extra-row');
+    extraRows.forEach(row => row.remove());
+    imageCount = 0;
+
+    // Reset buttons
+    seeMoreBtn.classList.remove('hidden');
+    seeLessBtn.classList.add('hidden');
+  }
+</script>
+
+
+</section>
+
+
+
+
+
+
+<!-- navbar js  -->
+  <script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggleButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate bars into a cross
+    bar1.classList.toggle('rotate-45');
+    bar1.classList.toggle('top-3');
+    bar3.classList.toggle('-rotate-45');
+    bar3.classList.toggle('top-3');
+    bar2.classList.toggle('opacity-0');
+  });
+</script>
+
+
+
+</body>
+</html>

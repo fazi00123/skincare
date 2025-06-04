@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-white">
+  
+  <section class="xl:px-24 lg:px-10 px-5 xl:pt-14 lg:pt-8 pt-5">
+    <nav class="bg-white py-5 px-10 relative">
+        <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div>
+      <img src="./assets/img/logo.png" alt="Logo" class="">
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex items-center space-x-16">
+      <ul class="flex space-x-10">
+        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Home</a></li>
+        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Our services</a></li>
+        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Our story</a></li>
+        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+    <!-- Desktop Button -->
+    <div class="hidden lg:block">
+      <button class="bg-[#5B3A4B] text-white text-lg py-2 px-6 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+        Contact us
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="relative w-8 h-8 focus:outline-none">
+        <div id="bar1" class="absolute w-8 h-0.5 bg-[#5B3A4B] transition-transform duration-300"></div>
+        <div id="bar2" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-3 transition-opacity duration-300"></div>
+        <div id="bar3" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-6 transition-transform duration-300"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden mt-4 space-y-4 hidden animate-fade-in">
+    <ul class="flex flex-col space-y-3 text-center">
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Home</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our services</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our story</a></li>
+      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B]  transition">Contact us</a></li>
+    </ul>
+    <div class="text-center">
+      <button class="mt-4 bg-[#5B3A4B] text-white text-lg py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+        Contact us
+      </button>
+    </div>
+  </div>
+    </nav>
+  </section>
+
+
+  <section class="bg-[#FBFBFB] absolute top-0 right-0 left-0 -z-50">
+    <div class="flex justify-between">
+      <div class="w-1/2">
+        <img src="./assets/img/heroimg.png" class="w-full h-auto" alt="">
+      </div>
+
+      <div class="w-1/2 xl:pr-24 lg:pr-10 pr-5">
+        <h1 class="xl:text-6xl lg:text-5xl text-4xl text-center">Glow Starts Here</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  toggleButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+
+    // Animate bars into a cross
+    bar1.classList.toggle('rotate-45');
+    bar1.classList.toggle('top-3');
+    bar3.classList.toggle('-rotate-45');
+    bar3.classList.toggle('top-3');
+    bar2.classList.toggle('opacity-0');
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#fdfdfd] text-[#333]">
+  <!-- Navbar -->
+  <nav class="bg-white py-5 px-4 md:px-10 rounded-lg shadow-md flex justify-between items-center">
+    <div class="text-2xl font-semibold text-[#222]">
+      Skincare
+    </div>
+    <ul class="hidden md:flex space-x-10 text-lg">
+      <li><a href="#" class="text-[#666] hover:text-[#5B3A4B] transition">Home</a></li>
+      <li><a href="#" class="text-[#666] hover:text-[#5B3A4B] transition">Our services</a></li>
+      <li><a href="#" class="text-[#666] hover:text-[#5B3A4B] transition">Our story</a></li>
+      <li><a href="#" class="text-[#666] hover:text-[#5B3A4B] transition">Contact us</a></li>
+    </ul>
+    <div class="hidden md:block">
+      <button class="bg-[#5B3A4B] text-white px-6 py-2 rounded-md shadow hover:bg-[#472d3b] transition">
+        Contact us
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="px-4 md:px-16 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between">
+    <!-- Text Content -->
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-4xl md:text-5xl font-semibold text-[#5B3A4B] leading-tight">
+        Healthy Skin Starts Here
+      </h1>
+      <p class="text-lg text-[#555] max-w-xl">
+        Personalized skincare treatments by Dr. [Name], a board-certified dermatologist dedicated to helping you
+        achieve radiant, healthy skin.
+      </p>
+      <div class="flex space-x-4">
+        <button class="bg-[#5B3A4B] text-white px-6 py-3 rounded-md hover:bg-[#472d3b] transition">
+          Book an Appointment
+        </button>
+        <button class="border border-[#5B3A4B] text-[#5B3A4B] px-6 py-3 rounded-md hover:bg-[#f5f0f3] transition">
+          Explore Treatments
+        </button>
+      </div>
+
+       <!-- Injection Tag -->
+      <div class="relative mt-16">
+        <div class="bg-[#f9f8f8] text-[#5B3A4B] px-6 py-4 rounded shadow-lg w-fit text-lg font-medium">
+          Skin Booster Injection
+        </div>
+        <div class="absolute top-1/2 left-60 translate-x-2 -translate-y-1/2 h-px w-36 bg-[#5B3A4B] bg-gradient-to-r from-[#5B3A4B] to-white"></div>
+        <div class="absolute top-1/2 left-[65%] -translate-y-1/2 w-5 h-5 bg-[#5B3A4B] rounded-full flex items-center justify-center">
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Image Content -->
+    <div class="relative md:w-1/2 mt-12 md:mt-0">
+      <img src="./assets/img/heroimg1.png" alt="Skincare" class="rounded-lg shadow-md">
+
+      <!-- Card on image -->
+      <div class="absolute top-6 right-6 bg-white/80 backdrop-blur-md rounded-lg shadow-md p-4 w-[250px]">
+        <h3 class="text-[#5B3A4B] text-md font-semibold mb-2">Natural skin treatment</h3>
+        <div class="flex space-x-2 overflow-x-auto mb-3">
+          <img src="https://images.unsplash.com/photo-1604542035774-0d6b961f7e25" class="h-12 w-12 rounded object-cover">
+          <img src="https://images.unsplash.com/photo-1599058917211-f7bdbfa4c318" class="h-12 w-12 rounded object-cover">
+          <img src="https://images.unsplash.com/photo-1588776814546-b37498d4e1be" class="h-12 w-12 rounded object-cover">
+        </div>
+        <button class="bg-[#5B3A4B] text-white text-sm px-4 py-2 w-full rounded-md hover:bg-[#472d3b] transition">
+          View Recommendation
+        </button>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

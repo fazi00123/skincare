@@ -13,14 +13,16 @@
         <div class="flex justify-between items-center">
     <!-- Logo -->
     <div>
+      <a href="index.html">
       <img src="./assets/img/logo.png" alt="Logo" class="">
+      </a>
     </div>
 
     <!-- Desktop Menu -->
     <div class="hidden lg:flex items-center space-x-16">
       <ul class="flex lg:space-x-8 xl:space-x-16">
-        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition active"><a href="#">Home</a></li>
-        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Our services</a></li>
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition active"><a href="index.html">Home</a></li>
+        <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="services.html">Our services</a></li>
         <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Our story</a></li>
         <li class="text-[#666666] 2xl:text-lg lg:text-base hover:text-[#5B3A4B] transition"><a href="#">Contact us</a></li>
       </ul>
@@ -46,10 +48,10 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden mt-4 space-y-4 hidden animate-fade-in">
     <ul class="flex flex-col space-y-3 text-center">
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition active">Home</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our services</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our story</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B]  transition">Contact us</a></li>
+      <li><a href="index.html" class="text-[#666666] text-base hover:text-[#5B3A4B] transition active">Home</a></li>
+      <li><a href="services.html" class="text-[#666666] text-base hover:text-[#5B3A4B] transition">Our services</a></li>
+      <li><a href="#" class="text-[#666666] text-base hover:text-[#5B3A4B] transition">Our story</a></li>
+      <li><a href="#" class="text-[#666666] text-base hover:text-[#5B3A4B]  transition">Contact us</a></li>
     </ul>
     <div class="text-center">
       <button class="mt-4 bg-[#5B3A4B] text-white text-lg py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
@@ -240,6 +242,7 @@
     <div class="mb-6 md:w-1/2 w-full flex flex-col md:justify-between md:h-[400px]">
       <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight" data-aos="fade-right"
       data-aos-duration="1500">What Our Patients Say</h1>
+      
      <!-- Desktop buttons -->
 <div class="flex justify-between pt-10 lg:pt-20 hidden md:flex">
   <button id="prevSlide">
@@ -350,9 +353,9 @@
       <img src="./assets/img/footerlogo.png" alt="">
     </div>
     <div class="flex justify-center lg:justify-end xl:space-x-5 space-x-4 lg:w-2/5 w-full">
-      <p class="text-[#666666] xl:text-base lg:text-xs text-sm hover:underline">Terms & Conditions</p>
-      <p class="text-[#666666] xl:text-base lg:text-xs text-sm hover:underline">Privacy Policy</p>
-      <p class="text-[#666666] xl:text-base lg:text-xs text-sm hover:underline">Cookies Setting</p>
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Terms & Conditions</p>
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Privacy Policy</p>
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Cookies Setting</p>
     </div>
   </div>
 
@@ -435,34 +438,32 @@
 <!-- testimonial slider js  -->
 <script>
   const slider = document.getElementById("slider");
-  const nextBtn = document.getElementById("nextSlide");
-  const prevBtn = document.getElementById("prevSlide");
-
   let currentSlide = 0;
   const totalSlides = slider.children.length;
-
-  nextBtn.addEventListener("click", () => {
-    if (currentSlide < totalSlides - 1) {
-      currentSlide++;
-    } else {
-      currentSlide = 0; // Loop back to first
-    }
-    updateSlider();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-    } else {
-      currentSlide = totalSlides - 1; // Go to last
-    }
-    updateSlider();
-  });
 
   function updateSlider() {
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
+
+  function goToNextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  }
+
+  function goToPrevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+
+  // Desktop buttons
+  document.getElementById("nextSlide").addEventListener("click", goToNextSlide);
+  document.getElementById("prevSlide").addEventListener("click", goToPrevSlide);
+
+  // Mobile buttons
+  document.getElementById("nextSlideMobile").addEventListener("click", goToNextSlide);
+  document.getElementById("prevSlideMobile").addEventListener("click", goToPrevSlide);
 </script>
+
 
 <script src="https://kit.fontawesome.com/a2ada4947c.js" crossorigin="anonymous"></script>
 </body>

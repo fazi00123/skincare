@@ -8,75 +8,211 @@
 </head>
 <body class="bg-white">
   
-  <section class="xl:px-24 lg:px-10 px-5 xl:pt-14 lg:pt-8 pt-5">
-    <nav class="bg-white py-5 px-10 relative">
-        <div class="flex justify-between items-center">
-    <!-- Logo -->
-    <div>
-      <img src="./assets/img/logo.png" alt="Logo" class="">
+  <section class="relative xl:mx-24 lg:mx-10 mx-5">
+  <!-- Navbar -->
+   <div>
+  <nav class="bg-white py-5 px-10 absolute top-14 w-full z-50">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div>
+        <img src="./assets/img/logo.png" alt="Logo" class="">
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center">
+        <ul class="flex lg:space-x-8 xl:space-x-16">
+          <li class="text-[#666666] 2xl:text-lg text-base hover:text-[#5B3A4B] transition"><a href="index.html">Home</a></li>
+          <li class="text-[#666666] 2xl:text-lg text-base hover:text-[#5B3A4B] transition active"><a href="services.html">Our services</a></li>
+          <li class="text-[#666666] 2xl:text-lg text-base hover:text-[#5B3A4B] transition"><a href="#">Our story</a></li>
+          <li class="text-[#666666] 2xl:text-lg text-base hover:text-[#5B3A4B] transition"><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- Desktop Button -->
+      <div class="hidden lg:block">
+        <button class="bg-[#5B3A4B] text-white text-lg py-2 px-6 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+          Contact us
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="relative w-8 h-8 focus:outline-none">
+          <div id="bar1" class="absolute w-8 h-0.5 bg-[#5B3A4B] transition-transform duration-300"></div>
+          <div id="bar2" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-3 transition-opacity duration-300"></div>
+          <div id="bar3" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-6 transition-transform duration-300"></div>
+        </button>
+      </div>
     </div>
 
-    <!-- Desktop Menu -->
-    <div class="hidden lg:flex items-center space-x-16">
-      <ul class="flex space-x-10">
-        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Home</a></li>
-        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Our services</a></li>
-        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Our story</a></li>
-        <li class="text-[#666666] text-lg hover:text-[#5B3A4B] transition"><a href="#">Contact us</a></li>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden mt-4 space-y-4 hidden animate-fade-in">
+      <ul class="flex flex-col space-y-3 text-center">
+        <li><a href="index.html" class="text-[#666666] text-base hover:text-[#5B3A4B] transition">Home</a></li>
+        <li><a href="services.html" class="text-[#666666] text-base hover:text-[#5B3A4B] transition active">Our services</a></li>
+        <li><a href="#" class="text-[#666666] text-base hover:text-[#5B3A4B] transition">Our story</a></li>
+        <li><a href="#" class="text-[#666666] text-base hover:text-[#5B3A4B]  transition">Contact us</a></li>
       </ul>
+      <div class="text-center">
+        <button class="mt-4 bg-[#5B3A4B] text-white text-lg py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
+          Contact us
+        </button>
+      </div>
+    </div>
+  </nav>
+  </div>
+</section>
+
+<!-- Hero Section -->
+<section class="bg-[#FBFBFB] ">
+  <div class="flex flex-col lg:flex-row gap-10 items-center">
+    <div class="lg:w-1/2">
+      <img src="./assets/img/heroimg.png" class="w-full" alt="">
     </div>
 
-    <!-- Desktop Button -->
-    <div class="hidden lg:block">
-      <button class="bg-[#5B3A4B] text-white text-lg py-2 px-6 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
-        Contact us
-      </button>
+    <div class="lg:w-2/5 w-full space-y-6 xl:pt-32 2xl:pt-40 lg:pt-20 text-center lg:px-0 px-5">
+      <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">
+        Glow Starts Here
+      </h1>
+      <p class="2xl:text-lg xl:text-base text-sm text-[#666666]">
+        We offer a wide range of medical and cosmetic dermatology services tailored to your skin's unique needs. Whether you're addressing a chronic condition or seeking aesthetic enhancement, our treatments are designed with precision, safety, and results in mind.
+      </p>
+      <div class="flex flex-row gap-5 items-center justify-center">
+        <button class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition text-center md:text-start">
+          Book an Appointment
+        </button>
+        <button class="bg-white text-[#5B3A4B] xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-[#5B3A4B] hover:text-white border border-[#5B3A4B] transition text-center lg:text-start">
+          Explore Treatments
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- medical dermatologist  -->
+<section class="xl:px-24 lg:px-10 px-5 xl:py-28 py-14">
+
+  <div class="flex md:flex-row flex-col lg:gap-20 gap-8 items-center">
+    <div class="md:w-1/2 w-full">
+      <img src="./assets/img/medicalimg.png" alt="">
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="lg:hidden">
-      <button id="menu-toggle" class="relative w-8 h-8 focus:outline-none">
-        <div id="bar1" class="absolute w-8 h-0.5 bg-[#5B3A4B] transition-transform duration-300"></div>
-        <div id="bar2" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-3 transition-opacity duration-300"></div>
-        <div id="bar3" class="absolute w-8 h-0.5 bg-[#5B3A4B] top-6 transition-transform duration-300"></div>
-      </button>
+       <div class="md:w-1/2 w-full bg-no-repeat bg-cover" style="background-image: url(./assets/img/medicalbg.png);">
+      <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">Medical Dermatology</h1>
+      <p class="2xl:text-[22px] 2xl:leading-10 xl:text-base text-sm text-[#666666] pt-5">
+        We provide expert diagnosis and treatment for a wide range of skin conditions, including acne, eczema, psoriasis, rosacea, fungal infections, and more. Our goal is to restore your skin’s health through evidence-based care, whether you're managing a chronic issue or addressing a sudden concern. 
+      </p>
+
+       <div class="xl:pt-14 pt-10">
+        <button class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 xl:px-6 px-4 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition text-center md:text-start">
+          Book an Appointment
+        </button>
+      </div>
+    </div>
+  
+  </div>
+</section>
+
+<!-- Skin Rejuvenation & Wellness  -->
+<section class="xl:px-24 lg:px-10 px-5 xl:py-20 py-10">
+  <div>
+
+    <div class="text-center xl:pb-16 pb-10">
+    <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">Skin Rejuvenation & Wellness</h1>
+    <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] md:pt-4 pt-2">Personalized Care to Help You Look and Feel Your Best</p>
+  </div>
+
+  <div class="flex md:flex-row flex-col md:gap-10 gap-5">
+    <div class="md:w-1/3 w-full flex flex-col justify-between gap-10 md:gap-0">
+      <div>
+        <h1 class="text-base lg:text-xl 2xl:text-[22px] text-[#5B3A4B]">Hydrafacial</h1>
+        <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] md:pt-4 pt-2">A 3-step deep cleansing facial treatment that hydrates, exfoliates, and nourishes all in one session.</p>
+      </div>
+
+       <div>
+        <h1 class="text-base lg:text-xl 2xl:text-[22px] text-[#5B3A4B]">Hydrafacial</h1>
+        <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] md:pt-4 pt-2">A 3-step deep cleansing facial treatment that hydrates, exfoliates, and nourishes all in one session.</p>
+      </div>
+    </div>
+
+    <div class="md:w-1/3 w-full">
+      <img src="./assets/img/wellnessimg.png" alt="">
+    </div>
+
+     <div class="md:w-1/3 w-full flex flex-col justify-between gap-10 md:gap-0">
+      <div>
+        <h1 class="text-base lg:text-xl 2xl:text-[22px] text-[#5B3A4B]">Hydrafacial</h1>
+        <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] md:pt-4 pt-2">A 3-step deep cleansing facial treatment that hydrates, exfoliates, and nourishes all in one session.</p>
+      </div>
+
+       <div>
+        <h1 class="text-base lg:text-xl 2xl:text-[22px] text-[#5B3A4B]">Hydrafacial</h1>
+        <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] md:pt-4 pt-2">A 3-step deep cleansing facial treatment that hydrates, exfoliates, and nourishes all in one session.</p>
+      </div>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden mt-4 space-y-4 hidden animate-fade-in">
-    <ul class="flex flex-col space-y-3 text-center">
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Home</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our services</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B] transition">Our story</a></li>
-      <li><a href="#" class="text-[#666666] text-lg hover:text-[#5B3A4B]  transition">Contact us</a></li>
-    </ul>
-    <div class="text-center">
-      <button class="mt-4 bg-[#5B3A4B] text-white text-lg py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition">
-        Contact us
-      </button>
+  </div>
+</section>
+
+<!-- newsletter section  -->
+<section class="bg-[#FBFBFB] xl:px-24 lg:px-10 px-5 xl:py-20 py-10">
+  <div class="text-center xl:pb-16 pb-10">
+    <h1 class="text-3xl xl:text-[40px] 2xl:text-6xl text-[#5B3A4B] leading-tight">Stay Glowing – Join Our Skincare Newsletter</h1>
+    <p class="2xl:text-[22px] xl:text-base text-sm text-[#666666] pt-4">Get expert skincare tips, exclusive offers, and updates on the latest treatments delivered straight to your inbox</p>
+  </div>
+
+  <div>
+    <h1 class="text-xl xl:text-2xl 2xl:text-3xl text-[#5B3A4B] leading-tight text-center">Get 15% Off on your first order</h1>
+  </div>
+
+  <div class="flex justify-center 2xl:pt-10 pt-6">
+    <form action="" class="lg:w-3/5 w-full">
+      <div class="flex md:flex-row flex-col md:gap-10 gap-4">
+        <input type="text" id="name" class="w-full py-3 border-b-[1px] bg-transparent border-[#5B3A4B] placeholder:[#04070780] outline-none focus:outline-none" placeholder="First Name" required>
+
+          <input type="text" id="name" class="w-full py-3 border-b-[1px] bg-transparent border-[#5B3A4B] placeholder:[#04070780] outline-none focus:outline-none" placeholder="Last Name" required>
+      </div>
+
+      <div class="pt-4">
+         <input type="Email" id="email" class="w-full py-3 border-b-[1px] bg-transparent border-[#5B3A4B] placeholder:[#04070780] outline-none focus:outline-none" placeholder="E-mail" required>
+      </div>
+
+      <div class="xl:pt-14 pt-10 text-center">
+        <button class="bg-[#5B3A4B] text-white xl:text-lg text-sm py-2 px-8 hover:bg-white hover:text-[#5B3A4B] border border-[#5B3A4B] transition text-center md:text-start">
+          Subscribe
+        </button>
+    </form>
+  </div>
+</section>
+
+<!-- footer section  -->
+ <footer class="xl:px-24 lg:px-10 px-5 xl:pt-20 pt-10">
+  
+  <div class="flex lg:flex-row flex-col lg:justify-between justify-center items-center pb-8 w-full gap-5 lg:gap-0">
+    <div class="lg:w-1/5 w-full flex justify-center lg:hidden block ">
+      <img src="./assets/img/footerlogo.png" alt="">
+    </div>
+    <div class="flex lg:justify-start justify-center space-x-8 lg:w-2/5 w-full">
+      <a href="" class="text-[#5B3A4B] text-3xl 2xl:text-4xl"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="" class="text-[#5B3A4B] text-3xl 2xl:text-4xl"><i class="fa-brands fa-instagram"></i></a>
+      <a href="" class="text-[#5B3A4B] text-3xl 2xl:text-4xl"><i class="fa-brands fa-square-x-twitter"></i></a>
+    </div>
+    <div class="lg:w-1/5 w-full flex justify-center lg:block hidden">
+      <img src="./assets/img/footerlogo.png" alt="">
+    </div>
+    <div class="flex justify-center lg:justify-end xl:space-x-5 space-x-4 lg:w-2/5 w-full">
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Terms & Conditions</p>
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Privacy Policy</p>
+      <p class="text-[#666666] 2xl:text-base xl:text-sm lg:text-xs text-sm hover:underline">Cookies Setting</p>
     </div>
   </div>
-    </nav>
-  </section>
 
+  <hr>
+  <p class="text-[#666666] text-sm text-center py-8">2025 Skincare, LLC. ALL RIGHTS RESERVED.</p>
+ </footer>
 
-  <section class="bg-[#FBFBFB] absolute top-0 right-0 left-0 -z-50">
-    <div class="flex justify-between">
-      <div class="w-1/2">
-        <img src="./assets/img/heroimg.png" class="w-full h-auto" alt="">
-      </div>
-
-      <div class="w-1/2 xl:pr-24 lg:pr-10 pr-5">
-        <h1 class="xl:text-6xl lg:text-5xl text-4xl text-center">Glow Starts Here</h1>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
+<!-- navbar js  -->
   <script>
   const toggleButton = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');

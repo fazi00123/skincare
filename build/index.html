@@ -363,6 +363,20 @@
   <p class="text-[#666666] text-sm text-center py-8">2025 Skincare, LLC. ALL RIGHTS RESERVED.</p>
  </footer>
 
+ <!-- up button  -->
+  <button 
+  x-data="{ show: false }"
+  x-init="window.addEventListener('scroll', () => show = window.scrollY > 300)"
+  x-show="show"
+  @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  class="fixed bottom-6 right-6 z-50 bg-white text-black hover:text-white p-3 rounded-full shadow-xl hover:bg-[#5B3A4B] transition-all duration-300"
+  aria-label="Scroll to top"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 <!-- navbar js  -->
   <script>
